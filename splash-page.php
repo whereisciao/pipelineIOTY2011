@@ -1,3 +1,9 @@
+<?php 
+/*
+Template Name: Splash Page
+*/
+?>
+<!-- Header BEGIN -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -12,24 +18,7 @@
 	<?php } ?>
 
 	<title>
-		   <?php
-		      if (function_exists('is_tag') && is_tag()) {
-		         single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
-		      elseif (is_archive()) {
-		         wp_title(''); echo ' Archive - '; }
-		      elseif (is_search()) {
-		         echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
-		      elseif (!(is_404()) && (is_single()) || (is_page())) {
-		         wp_title(''); echo ' - '; }
-		      elseif (is_404()) {
-		         echo 'Not Found - '; }
-		      if (is_home()) {
-		         bloginfo('name'); echo ' - '; bloginfo('description'); }
-		      else {
-		          bloginfo('name'); }
-		      if ($paged>1) {
-		         echo ' - page '. $paged; }
-		   ?>
+		   <?php bloginfo('name'); ?>
 	</title>
 	
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -53,7 +42,31 @@
 	
 	<div id="page-wrap" class="container">
 		<div id="header">
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<div class="description"><?php bloginfo('description'); ?></div>
+      <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/header-logo.png" width="534" height="118" alt="Pipeline Innovator of the Year: The Entrepreneurs' Night To Shine" />
 		</div>
 
+<!-- Header END -->
+
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+						
+			<div class="entry">
+			  <div class="video">
+				<?php
+          $videos = get_post_custom_values("video");
+          foreach ( $videos as $key => $value ) {
+            echo $value; 
+          }
+        ?>
+        </div>
+				<?php the_content(); ?>
+			</div>
+			
+			<?php edit_post_link('Edit this entry','',''); ?>
+			
+		</div>
+
+	<?php endwhile; endif; ?>
+	
+<?php get_footer(); ?>

@@ -10,13 +10,11 @@ Version: 1
 @media screen {
 
 * { margin: 0; padding: 0; }
-body { background: white; font: 14px/1.4 Georgia, Serif; }
+body { background: #fff; font: 14px/1.4 Georgia, Serif; color: #000; }
 .screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
 .clear { clear: both; }
 .group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 * html .group, *:first-child+html .group { zoom: 1; } /* First selector = IE6, Second Selector = IE 7 */
-
-#page-wrap { width: 960px; margin: 20px auto; }
 
 h1, h2, h3 { font-weight: normal; margin: 0 0 10px 0; }
 h1 { }
@@ -24,8 +22,8 @@ h2 { }
 h3 { }
 
 p { margin: 0 0 10px 0; }
-a { }
-a:hover { } 
+a { color: #D3AD8E; text-decoration: none; }
+a:hover { color: #D3AD8E; text-decoration: underline; } 
 
 blockquote { }
 blockquote p { }
@@ -53,6 +51,80 @@ code, tt { }
 #searchform { }
 	#s { }
 	#searchsubmt { }
+	
+
+.hiddenText {
+  display: block;
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden; 
+}
+
+.page-template-splash-page-php{
+  background: #fff url('images/background.jpg') no-repeat center top;
+  color: #fff;
+}
+
+.page-template-splash-page-php #page-wrap{
+  min-height: 882px;
+}
+
+.page-template-splash-page-php #header{
+  min-width: 534px;
+  min-height: 160px;
+  display: block;
+  margin: 0 auto;
+}
+
+.page-template-splash-page-php #header .logo{
+  display: none;
+}
+
+.page-template-splash-page-php #footer {
+  background: #fff;
+}
+
+.page-template-splash-page-php .event-announcement { font-size: 28px; }
+.page-template-splash-page-php .timezone { font-size: 20px; }
+.page-template-splash-page-php .video { margin-bottom: 25px; text-align: center; }
+
+#footer .logos { float: left; }
+#footer .link-kansaspipeline-org {
+  float: right; 
+  margin-top: 35px;
+  font-size: 18px;
+}
+
+#footer .pipeline-logo {
+  margin-top: -10px;
+}
+
+#footer a, #footer a:hover { color: #727272; }
+	
+.link-block a { 
+  width: 34px; 
+  height: 34px; 
+  display: block;
+}
+
+.link-facebook a { background: white url(images/facebook.jpg) no-repeat 0px 0px; }
+//.link-facebook a:hover { background: white url(images/facebook.jpg) no-repeat 0px 34px; }
+.link-twitter a { background: white url(images/twitter.jpg) no-repeat 0px 0px; }
+//.link-twitter a:hover { background: white url(images/twitter.jpg) no-repeat 0px 34px; }
+
+.vmenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.vmenu li{
+  float: left;
+  margin-right: 15px;
+  padding-top: 25px;
+  
+}
 	
 ol.commentlist { list-style: none; }
 ol.commentlist li { }
