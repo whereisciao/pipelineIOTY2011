@@ -92,9 +92,11 @@ code, tt { }
 
 #footer .logos { float: left; }
 #footer .link-kansaspipeline-org {
-  float: right; 
-  margin-top: 35px;
-  font-size: 18px;
+  font-size:18px;
+  margin:0 auto;
+  position:relative;
+  top:-64px;
+  width:200px;
 }
 
 #footer .pipeline-logo {
@@ -109,10 +111,10 @@ code, tt { }
   display: block;
 }
 
-.link-facebook a { background: white url(images/facebook.jpg) no-repeat 0px 0px; }
-//.link-facebook a:hover { background: white url(images/facebook.jpg) no-repeat 0px 34px; }
-.link-twitter a { background: white url(images/twitter.jpg) no-repeat 0px 0px; }
-//.link-twitter a:hover { background: white url(images/twitter.jpg) no-repeat 0px 34px; }
+.link-facebook a { background: white url(images/facebook.jpg) no-repeat center top; }
+.link-facebook a:hover { background: white url(images/facebook.jpg) no-repeat center bottom; }
+.link-twitter a { background: white url(images/twitter.jpg) no-repeat center top; }
+.link-twitter a:hover { background: white url(images/twitter.jpg) no-repeat center bottom; }
 
 .vmenu {
   margin: 0;
