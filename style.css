@@ -10,7 +10,7 @@ Version: 1
 @media screen {
 
 * { margin: 0; padding: 0; }
-body { background: #fff; font: 14px/1.4 Georgia, Serif; color: #000; }
+body { background: #000; font: 14px/1.4 Georgia, Serif; color: #fff; }
 .screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
 .clear { clear: both; }
 .group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
@@ -62,12 +62,14 @@ code, tt { }
   overflow: hidden; 
 }
 
-.page-template-splash-page-php{
-  background: #fff url('images/background.jpg') no-repeat center top;
-  color: #fff;
+
+.page-template-splash-page-php .container{
+  width: 888px;
 }
 
 .page-template-splash-page-php #page-wrap{
+  background: #000 url('images/background.jpg') no-repeat center top;
+  color: #fff;  
   min-height: 882px;
 }
 
@@ -93,10 +95,9 @@ code, tt { }
 #footer .logos { float: left; }
 #footer .link-kansaspipeline-org {
   font-size:18px;
-  margin:0 auto;
-  position:relative;
-  top:-64px;
-  width:200px;
+  margin:0 auto -40px;
+  padding-top:25px;
+  text-align:center;
 }
 
 #footer .pipeline-logo {
@@ -104,17 +105,22 @@ code, tt { }
 }
 
 #footer a, #footer a:hover { color: #727272; }
+#footer .sponsors {
+  margin-top: 25px;
+  float: right;
+  text-align: center;
+}
 	
 .link-block a { 
   width: 34px; 
-  height: 34px; 
+  height: 33px; 
   display: block;
 }
 
-.link-facebook a { background: white url(images/facebook.jpg) no-repeat center top; }
-.link-facebook a:hover { background: white url(images/facebook.jpg) no-repeat center bottom; }
-.link-twitter a { background: white url(images/twitter.jpg) no-repeat center top; }
-.link-twitter a:hover { background: white url(images/twitter.jpg) no-repeat center bottom; }
+.link-facebook a { background: white url(images/facebook.jpg) no-repeat 0px 0px; }
+.link-facebook a:hover { background: white url(images/facebook.jpg) no-repeat 0px -34px; }
+.link-twitter a { background: white url(images/twitter.jpg) no-repeat 0px 0px; }
+.link-twitter a:hover { background: white url(images/twitter.jpg) no-repeat 0px -34px; }
 
 .vmenu {
   margin: 0;

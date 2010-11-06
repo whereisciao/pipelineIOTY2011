@@ -27,6 +27,7 @@ Template Name: Splash Page
   <link href='<?php bloginfo('stylesheet_directory'); ?>/css/print.css' media='print' rel='stylesheet' type='text/css' />
   <!--[if IE]>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/style-ie.css" type="text/css" media="screen, projection">
   <![endif]-->  
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 	
@@ -36,12 +37,18 @@ Template Name: Splash Page
 
 	<?php wp_head(); ?>
 	
+	<script type="text/javascript">
+    $(document).ready(function() {
+      $('.sponsors').cycle({ fx: 'scrollRight' });
+    });
+  </script>
+	
 </head>
 
 <body <?php body_class(); ?>>
 	
-	<div id="page-wrap" class="container">
-		<div id="header">
+	<div id="page-wrap">
+		<div id="header" class="container">
       <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/header-logo.png" width="534" height="118" alt="Pipeline Innovator of the Year: The Entrepreneurs' Night To Shine" />
 		</div>
 
@@ -49,14 +56,16 @@ Template Name: Splash Page
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+		<div <?php post_class("container") ?> id="post-<?php the_ID(); ?>">
 						
 			<div class="entry">
 			  <div class="video">
 				<?php
           $videos = get_post_custom_values("video");
-          foreach ( $videos as $key => $value ) {
-            echo $value; 
+          if(count($videos) > 0){
+            foreach ( $videos as $key => $value ) {
+              echo $value; 
+            }            
           }
         ?>
         </div>

@@ -6,8 +6,11 @@
 	// Load jQuery
 	if ( !is_admin() ) {
 	   wp_deregister_script('jquery');
+
 	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
+
 	   wp_enqueue_script('jquery');
+	   wp_enqueue_script('jquery-cycle', get_bloginfo( 'template_directory' ) . "/js/jquery.cycle.all.min.js", array(), '0.1');   
 	}
 	
 	// Clean up the <head>
