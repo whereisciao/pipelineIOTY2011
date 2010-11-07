@@ -7,6 +7,11 @@ Author URI: http://chriscoyier.net
 Version: 1
 */
 
+@font-face {
+  font-family: "Tallys";
+  src: url(css/fonts/Tallys_15.otf) format("opentype");
+}
+
 @media screen {
 
 * { margin: 0; padding: 0; }
@@ -66,32 +71,30 @@ code, tt { }
 .page-template-splash-page-php .container{
   width: 888px;
 }
-
 .page-template-splash-page-php #page-wrap{
   background: #000 url('images/background.jpg') no-repeat center top;
   color: #fff;  
   min-height: 882px;
 }
-
 .page-template-splash-page-php #header{
   min-width: 534px;
   min-height: 160px;
   display: block;
   margin: 0 auto;
 }
-
 .page-template-splash-page-php #header .logo{
   display: none;
 }
-
 .page-template-splash-page-php #footer {
   background: #fff;
 }
-
 .page-template-splash-page-php .event-announcement { font-size: 28px; }
 .page-template-splash-page-php .timezone { font-size: 20px; }
 .page-template-splash-page-php .video { margin-bottom: 25px; text-align: center; }
-
+.page-template-splash-page-php .live-text{
+  font-family: "Tallys", "Garamond", "serif";
+  text-transform: uppercase;
+}
 #footer .logos { float: left; }
 #footer .link-kansaspipeline-org {
   font-size:18px;
@@ -133,7 +136,7 @@ code, tt { }
   padding-top: 25px;
   
 }
-	
+
 ol.commentlist { list-style: none; }
 ol.commentlist li { }
 ol.commentlist li.alt { }

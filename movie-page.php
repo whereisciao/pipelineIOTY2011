@@ -29,8 +29,9 @@ Template Name: Movie Page
 	  body{
 	    margin: 0;
 	    padding: 0;
+	    background: white url(/wp-content/themes/pipelineitoy/images/loading-background.gif) no-repeat 365px 231px;
 	  }
-	  p {display: none;}
+	  p {display: none;}    
 	</style>
 	
 </head>
