@@ -25,6 +25,7 @@ Template Name: Splash Page
 
 	<link href='<?php bloginfo('stylesheet_directory'); ?>/css/screen.css' media='screen, projection' rel='stylesheet' type='text/css' />
   <link href='<?php bloginfo('stylesheet_directory'); ?>/css/print.css' media='print' rel='stylesheet' type='text/css' />
+	<link href='<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.3.css' media='screen, projection' rel='stylesheet' type='text/css' />
   <!--[if IE]>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" type="text/css" media="screen, projection">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/style-ie.css" type="text/css" media="screen, projection">
@@ -40,6 +41,17 @@ Template Name: Splash Page
 	<script type="text/javascript">
     $(document).ready(function() {
       $('.sponsors').cycle({ fx: 'scrollRight' });
+      $("#trailer").fancybox({        
+        'width': 895,
+        'height': 495,
+        'titleShow': false,
+        'overlayOpacity': 0.8,
+        'overlayColor': "#000",
+        'type':  "iframe",
+        'scrolling': "no",
+        "padding": 10,
+        "margin": 20
+			}).click();			
     });
   </script>
 	

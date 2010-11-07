@@ -11,6 +11,7 @@
 
 	   wp_enqueue_script('jquery');
 	   wp_enqueue_script('jquery-cycle', get_bloginfo( 'template_directory' ) . "/js/jquery.cycle.all.min.js", array(), '0.1');   
+	   wp_enqueue_script('jquery-fancybox', get_bloginfo( 'template_directory' ) . "/js/fancybox/jquery.fancybox-1.3.3.pack.js", array(), '0.1');   
 	}
 	
 	// Clean up the <head>
