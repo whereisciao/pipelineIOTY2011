@@ -1,5 +1,6 @@
+    </div>
+    <div class="clearfix"></div>    
   </div>
-</div>
 	<div id="footer">
 	  <div class="container">
 			<p class="link-kansaspipeline-org">

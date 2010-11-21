@@ -43,16 +43,25 @@
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-
 	<?php wp_head(); ?>
+	
+	<script type="text/javascript">
+    $(document).ready(function() {
+      $('.sponsors').cycle({ fx: 'scrollRight' });
+    });
+  </script>
 </head>
 
 <body <?php body_class(); ?>>
 	
 	<div id="page-wrap" class="container">
 		<div id="header">
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<div class="description"><?php bloginfo('description'); ?></div>
+		  <div id="masthead">
+  		  <a href="<?php echo get_option('home'); ?>/">
+          <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/header-logo.png" width="534" height="118" alt="Pipeline Innovator of the Year: The Entrepreneurs' Night To Shine" />
+        </a>
+      </div>
+      <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>  		
 		</div>
+		
 

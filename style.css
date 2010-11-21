@@ -68,6 +68,9 @@ code, tt { }
 }
 
 
+#footer {
+  background: #fff;
+}
 .page-template-splash-page-php .container{
   width: 888px;
 }
@@ -84,9 +87,6 @@ code, tt { }
 }
 .page-template-splash-page-php #header .logo{
   display: none;
-}
-.page-template-splash-page-php #footer {
-  background: #fff;
 }
 .page-template-splash-page-php .event-announcement { font-size: 28px; }
 .page-template-splash-page-php .timezone { font-size: 20px; }
