@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
+<div class="container">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
 		<div class="post span-16 first" id="post-<?php the_ID(); ?>">
 
 			<div class="entry">
@@ -18,6 +18,6 @@
 
 		<?php endwhile; endif; ?>
 
-<?php get_sidebar(); ?>
-
+    <?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

@@ -54,8 +54,8 @@
 
 <body <?php body_class(); ?>>
 	
-	<div id="page-wrap" class="container">
-		<div id="header">
+	<div id="page-wrap">
+		<div id="header" class="container">
 		  <div id="masthead">
   		  <a href="<?php echo get_option('home'); ?>/">
           <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/header-logo.png" width="534" height="118" alt="Pipeline Innovator of the Year: The Entrepreneurs' Night To Shine" />

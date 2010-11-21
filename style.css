@@ -67,10 +67,13 @@ code, tt { }
   overflow: hidden; 
 }
 
-
 #footer {
   background: #fff;
   margin-top: 40px;
+}
+#page-wrap{
+  background: #000 url('images/background-dark.jpg') no-repeat center top;
+  color: #fff;  
 }
 .page-template-splash-page-php .container{
   width: 888px;
