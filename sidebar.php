@@ -1,4 +1,4 @@
-<div id="sidebar" class="prepend-1 span-8 last">
+<div id="sidebar" class="prepend-1 span-7 last">
 
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Widgets')) : else : ?>
     

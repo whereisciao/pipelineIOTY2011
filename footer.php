@@ -11,7 +11,7 @@
     		<img src="<?php echo get_bloginfo( 'template_directory' ) . "/images/sponsors/logo_kba.jpg" ?>" width="230" height="147" />
     		<img src="<?php echo get_bloginfo( 'template_directory' ) . "/images/sponsors/logo_ktec.png" ?>" width="241" height="60" />
     	</div>
-			<ul class="logos vmenu">
+			<ul class="logos menu">
 	      <li>
           <a href="http://www.kansaspipeline.org" target="_blank">
             <img class="pipeline-logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/pipeline-logo-footer.png" width="158" height="69" alt="Kansas Pipeline" />

@@ -60,6 +60,10 @@
   		  <a href="<?php echo get_option('home'); ?>/">
           <img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/images/header-logo.png" width="534" height="118" alt="Pipeline Innovator of the Year: The Entrepreneurs' Night To Shine" />
         </a>
+        <div class="tagline">
+          <span class="tagline-live">Live</span>
+          <span class="tagline-date">January 27</span>
+        </div>
       </div>
       <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>  		
 		</div>

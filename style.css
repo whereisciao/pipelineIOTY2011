@@ -70,6 +70,7 @@ code, tt { }
 
 #footer {
   background: #fff;
+  margin-top: 40px;
 }
 .page-template-splash-page-php .container{
   width: 888px;
@@ -125,16 +126,43 @@ code, tt { }
 .link-twitter a { background: white url(images/twitter.jpg) no-repeat 0px 0px; }
 .link-twitter a:hover { background: white url(images/twitter.jpg) no-repeat 0px -34px; }
 
-.vmenu {
+#menu-primary-navigation li{
+  float: left;
+  font-family: "Tallys", "Garamond", "serif";
+  text-transform: uppercase;
+  font-size: 16px;
+  border-right: 1px solid #999;
+  border-left:  1px solid #2B2C2B;
+  margin-bottom: 40px;
+}
+#menu-primary-navigation li a{
+  color: #fff;
+  display: inline-block;
+  padding: 9px 26px;  
+  background: transparent url(images/nav-sprite-bg.png) 0px 0px;
+  text-decoration: none;
+}
+#menu-primary-navigation li a:hover{
+  background: transparent url(images/nav-sprite-bg.png) 0px -40px;
+  text-decoration: none;  
+}
+
+#menu-primary-navigation .menu-item-48{
+  border-left: 1px none;  
+}
+#menu-primary-navigation .menu-item-42{
+  border-right: 1px none;  
+}
+
+.menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.vmenu li{
+#footer .menu li{
   float: left;
   margin-right: 15px;
-  padding-top: 25px;
-  
+  padding-top: 25px; 
 }
 
 ol.commentlist { list-style: none; }

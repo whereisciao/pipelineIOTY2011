@@ -2,7 +2,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-		<div class="post span-13 first" id="post-<?php the_ID(); ?>">
+		<div class="post span-16 first" id="post-<?php the_ID(); ?>">
 
 			<div class="entry">
 
