@@ -4,6 +4,7 @@
 add_action('after_setup_theme', 'pipelineioty_setup');
 
 if( ! function_exists( 'pipelineioty_setup' ) ):
+function pipelineioty_setup() {
 	// Add RSS links to <head> section
 	automatic_feed_links();
 	
@@ -42,6 +43,6 @@ if( ! function_exists( 'pipelineioty_setup' ) ):
 		'primary' => __( 'Primary Navigation', 'pipelineioty' )
 	) );
 
-
+}
 endif;
 ?>
