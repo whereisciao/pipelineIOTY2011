@@ -27,8 +27,8 @@ h2 { }
 h3 { }
 
 p { margin: 0 0 10px 0; }
-a { color: #D3AD8E; text-decoration: none; }
-a:hover { color: #D3AD8E; text-decoration: underline; } 
+a { color: #F5AC66; text-decoration: none; }
+a:hover { color: #F5AC66; text-decoration: underline; } 
 
 blockquote { }
 blockquote p { }
@@ -163,6 +163,41 @@ code, tt { }
   float: left;
   margin-right: 15px;
   padding-top: 25px; 
+}
+
+#masthead .logo { 
+  margin: 15px 40px 15px 70px; 
+  float: left;
+}
+#masthead .horizontal-border {
+  border-left: 1px solid #464642;    
+  float: left;  
+  height: 104px;
+  margin-top: 30px;  
+}
+#masthead .tagline { 
+  margin: 15px 0px; 
+  padding: 0 0 0 40px;
+  float: left;  
+  display: inline-block;
+  color: #F5AC66; 
+  font-family: "Tallys", "Garamond", "serif";
+  text-transform: uppercase;  
+}
+#masthead .tagline-live {
+  font-size: 78px;
+  display: block;
+  margin-bottom: -32px;
+  letter-spacing: 7px;
+}
+#masthead .tagline-date {
+  border-top: 1px solid #F5AC66;  
+  font-size: 24px;
+  display: block;
+  letter-spacing: 4px;
+}
+#masthead .tagline-day{
+  font-size: 32px;
 }
 
 ol.commentlist { list-style: none; }
