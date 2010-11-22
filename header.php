@@ -48,6 +48,7 @@
 	<script type="text/javascript">
     $(document).ready(function() {
       $('.sponsors').cycle({ fx: 'scrollRight' });
+      $('.slider').cycle({ fx: 'scrollLeft', pager: '#sliderNav' });      
     });
   </script>
 </head>

@@ -15,7 +15,10 @@ Version: 1
 @media screen {
 
 * { margin: 0; padding: 0; }
-body { background: #000; font: 14px/1.4 Georgia, Serif; color: #fff; }
+body { 
+  background: #000; 
+  font: 14px/1.4 Georgia, Serif; color: #fff; 
+}
 .screen-reader-text { position: absolute; left: -9999px; top: -9999px; }
 .clear { clear: both; }
 .group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
@@ -46,6 +49,10 @@ ul, ol { margin: 0 0 10px 0; }
 .entry { }
 .entry a { }
 .entry a:hover { }
+
+.entry p, .post p{
+  font: normal normal normal 12px/18px 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
+}
 
 pre { }
 code, tt { }
@@ -207,6 +214,24 @@ code, tt { }
 }
 #masthead .tagline-day{
   font-size: 32px;
+}
+
+ul.slider { list-style: none; padding: 0; margin: 0;}
+#sliderNav { text-align: center; }
+#sliderNav a { 
+  background: transparent url(images/slidernav.png) no-repeat 0px 0px; 
+  text-decoration: none; 
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  text-indent: 9999px;
+  margin: 0 5px;
+}
+#sliderNav a.activeSlide { 
+  background: transparent url(images/slidernav.png) no-repeat 0px -20px; 
+}
+#sliderNav a:focus { 
+  background: transparent url(images/slidernav.png) no-repeat 0px -10px; 
 }
 
 ol.commentlist { list-style: none; }
