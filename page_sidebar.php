@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Page without Sidebar
+ * Template Name: Page with Sidebar
  *
  */
 
@@ -24,5 +24,6 @@ get_header(); ?>
 
 		<?php endwhile; endif; ?>
 
+    <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

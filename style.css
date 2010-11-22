@@ -226,6 +226,7 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
   display: inline-block;
   text-indent: 9999px;
   margin: 0 5px;
+  overflow: hidden;
 }
 #sliderNav a.activeSlide { 
   background: transparent url(images/slidernav.png) no-repeat 0px -20px; 

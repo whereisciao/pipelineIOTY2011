@@ -47,8 +47,8 @@
 	
 	<script type="text/javascript">
     $(document).ready(function() {
-      $('.sponsors').cycle({ fx: 'scrollRight' });
-      $('.slider').cycle({ fx: 'scrollLeft', pager: '#sliderNav' });      
+      $('.sponsors').cycle({ fx: 'scrollRight', timeout: 4000 });
+      $('.slider').cycle({ fx: 'scrollRight', pager: '#sliderNav', timeout: 7000 });
     });
   </script>
 </head>
