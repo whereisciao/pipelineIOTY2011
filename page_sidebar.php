@@ -21,7 +21,6 @@ get_header(); ?>
 			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
 		</div>
-
 		<?php endwhile; endif; ?>
 
     <?php get_sidebar(); ?>
