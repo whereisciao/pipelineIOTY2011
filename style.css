@@ -154,7 +154,7 @@ code, tt { }
 #menu-primary-navigation li a{
   color: #fff;
   display: inline-block;
-  padding: 9px 37px;  
+  padding: 9px 28px;
   background: transparent url(images/nav-sprite-bg.png) 0px 0px;
   text-decoration: none;
 }

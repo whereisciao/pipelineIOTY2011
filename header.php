@@ -41,6 +41,9 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css" type="text/css" media="screen, projection">
   <![endif]-->  
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+  <!--[if IE]>
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/style-ie.css" type="text/css" media="screen, projection">
+  <![endif]-->  
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 

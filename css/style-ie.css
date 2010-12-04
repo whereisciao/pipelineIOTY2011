@@ -7,3 +7,11 @@
   width: 534px;
   height: 160px;
 }
+
+#menu-primary-navigation li a{
+  padding: 9px 23px !important;  
+}
+
+.post{
+  margin-top: 12px;
+}
