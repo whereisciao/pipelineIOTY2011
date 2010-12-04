@@ -1,5 +1,6 @@
 <?php
 
+include_once(TEMPLATEPATH.'/classes.php');
 
 add_action('after_setup_theme', 'pipelineioty_setup');
 add_action('init', 'create_black_tie_post_type');
@@ -65,5 +66,6 @@ function create_black_tie_post_type(){
   ));
 }
 endif;
+
 
 ?>
