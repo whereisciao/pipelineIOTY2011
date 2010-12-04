@@ -249,10 +249,15 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
   width: 150px;
   display: inline-block;
 }
-#menu-black-tie-navigation li{
+#menu-black-tie-navigation li, .blackTieGallery li{
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+}
+.blackTieGallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 ol.commentlist { list-style: none; }

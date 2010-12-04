@@ -67,5 +67,28 @@ function create_black_tie_post_type(){
 }
 endif;
 
+if( ! function_exists( 'blackTieGallery_handler' )):
+function blackTieGallery_handler($atts, $content=null, $code=""){
+  $args = shortcode_atts( array('width' => '300'), $atts );
 
+  $loop = new WP_Query( array( 'post_type' => 'blackTie', 'posts_per_page' => 9 ) );
+  $items = "";
+  while ( $loop->have_posts() ) : $loop->the_post();
+    $thumbnail = get_the_post_thumbnail(get_the_id(), 'thumbnail', 
+      array( 
+        'alt'   => get_the_title(),
+        'title' => get_the_title()));
+    $items .= "<li><a href='" . get_permalink()."'>". $thumbnail . "</a></li>";
+  endwhile;
+  
+  if($atts)
+  $gallery = "<ul class='blackTieGallery' style='width:".$args["width"]."px;'>";
+  $gallery .= $items;
+  $gallery .= "</ul><div class='clear'/>";
+  
+  return $gallery;
+}
+add_shortcode('blackTieGallery', 'blackTieGallery_handler');
+
+endif;
 ?>
