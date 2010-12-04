@@ -251,9 +251,10 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
 }
 #menu-black-tie-navigation li{
   float: left;
-  margin-right: 12px;
-  margin-bottom: 12px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
+
 ol.commentlist { list-style: none; }
 ol.commentlist li { }
 ol.commentlist li.alt { }

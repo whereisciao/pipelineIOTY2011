@@ -6,7 +6,7 @@ get_header(); ?>
   <div class="span-24 first last">
     <h2>Black Tie Fashion Gallery</h2>
   </div>
-  <div class="first span-6">
+  <div class="first span-5">
     <?php
       $blackTieWalker = new BlackTieWalker_Nav_Menu;
       wp_nav_menu( array( 'container_class' => 'blackTie-menu', 'theme_location' => 'blackTie', 'walker' => $blackTieWalker) );
@@ -14,7 +14,7 @@ get_header(); ?>
   </div>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="blackTie post span-17 prepend-1 last" id="post-<?php the_ID(); ?>">
+		<div class="blackTie post span-17 last" id="post-<?php the_ID(); ?>">
       <?php the_post_thumbnail(  ); ?>
 
 			<h2><?php the_title(); ?></h2>
