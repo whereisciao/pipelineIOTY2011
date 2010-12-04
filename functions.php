@@ -38,12 +38,14 @@ function pipelineioty_setup() {
   		'after_widget'  => '</div>',
   		'before_title'  => '<h2>',
   		'after_title'   => '</h2>'
-  	));
+  	));  	
   }
 
-	register_nav_menus( array(
-		'primary' => __( 'Primary Navigation', 'pipelineioty' )
-	) );
+  register_nav_menus( array(
+    'primary' => __( 'Primary Navigation', 'pipelineioty' ),
+    'blackTie' => __( 'Black Tie Navigation', 'pipelineioty' )
+    
+  ) );
 }
 endif;
 

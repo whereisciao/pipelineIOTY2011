@@ -3,9 +3,11 @@
 get_header(); ?>
 
 <div class="container">
+  <div class="span-24 first last">
+    <h2>Black Tie Fashion Gallery</h2>    
+  </div>
   <div class="first span-6">
-    <h2>Black Tie Sidebar</h2>
-    <p>Get all Black Tie Pages</p>
+    <?php wp_nav_menu( array( 'container_class' => 'blackTie-menu', 'theme_location' => 'blackTie' ) ); ?>  		
   </div>
   
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	  
