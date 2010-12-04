@@ -71,10 +71,15 @@ class BlackTieWalker_Nav_Menu extends Walker {
 		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+
+    $thumbnail = get_the_post_thumbnail($item->object_id, 'thumbnail', 
+      array( 
+        'alt'   => apply_filters( 'the_title', $item->title, $item->ID ),
+        'title' => apply_filters( 'the_title', $item->title, $item->ID )));    
         
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		$item_output .= $args->link_before . $thumbnail . $args->link_after;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
