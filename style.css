@@ -244,10 +244,21 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
 }
 .blackTie .post-meta {
   list-style: none;
+  padding: 0px;
+  margin: 0px;  
 }
 .blackTie .post-meta-key {
   width: 150px;
   display: inline-block;
+}
+.blackTie .wp-post-image{
+  margin-right: 1em;
+  margin-bottom: 2em;
+  float: left;  
+}
+.blackTie .entry{
+  float: left;
+  min-width: 100px;
 }
 #menu-black-tie-navigation li, .blackTieGallery li{
   float: left;

@@ -60,7 +60,7 @@ function create_black_tie_post_type(){
   	'show_ui' => true,
   	'capability_type' => 'post',
   	'hierarchical' => true,
-  	'rewrite' => array('slug' => 'black_ties'),
+  	'rewrite' => false,
   	'query_var' => false,
   	'supports' => array('title', 'custom-fields', 'page-attributes', 'thumbnail', 'editor')
   ));
@@ -69,9 +69,9 @@ endif;
 
 if( ! function_exists( 'blackTieGallery_handler' )):
 function blackTieGallery_handler($atts, $content=null, $code=""){
-  $args = shortcode_atts( array('width' => '300'), $atts );
+  $args = shortcode_atts( array('width' => '300', 'posts_per_page' => 10), $atts );
 
-  $loop = new WP_Query( array( 'post_type' => 'blackTie', 'posts_per_page' => 9 ) );
+  $loop = new WP_Query( array( 'post_type' => 'blackTie', 'posts_per_page' => $args["posts_per_page"] ) );
   $items = "";
   while ( $loop->have_posts() ) : $loop->the_post();
     $thumbnail = get_the_post_thumbnail(get_the_id(), 'thumbnail', 
