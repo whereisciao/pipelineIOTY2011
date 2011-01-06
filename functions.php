@@ -4,6 +4,7 @@ include_once(TEMPLATEPATH.'/classes.php');
 
 add_action('after_setup_theme', 'pipelineioty_setup');
 add_action('init', 'create_black_tie_post_type');
+add_action('init', 'create_sponsor_post_type');
 add_theme_support( 'post-thumbnails' );
 
 if( ! function_exists( 'pipelineioty_setup' ) ):
@@ -89,6 +90,47 @@ function blackTieGallery_handler($atts, $content=null, $code=""){
   return $gallery;
 }
 add_shortcode('blackTieGallery', 'blackTieGallery_handler');
+
+endif;
+
+if( ! function_exists('create_sponsor_post_type')):
+function create_sponsor_post_type(){
+  register_post_type('sponsor', array(
+  	'label' => __('Sponsors'),
+  	'singular_label' => __('Sponsor'),
+  	'public' => true,
+  	'show_ui' => true,
+  	'capability_type' => 'post',
+  	'hierarchical' => true,
+  	'rewrite' => false,
+  	'query_var' => false,
+  	'supports' => array('title', 'custom-fields', 'page-attributes', 'thumbnail')
+  ));
+}
+endif;
+
+if( ! function_exists( 'sponsorGallery_handler' )):
+function sponsorGallery_handler($atts, $content=null, $code=""){
+  $args = shortcode_atts( array('width' => '300', 'posts_per_page' => -1), $atts );
+
+  $loop = new WP_Query( array( 'post_type' => 'sponsor', 'posts_per_page' => $args["posts_per_page"] ) );
+  $items = "";
+  while ( $loop->have_posts() ) : $loop->the_post();
+    $thumbnail = get_the_post_thumbnail(get_the_id(), 'thumbnail', 
+      array( 
+        'alt'   => get_the_title(),
+        'title' => get_the_title()));
+    $items .= "<li><a href='" . get_permalink()."'>". $thumbnail . "</a></li>";
+  endwhile;
+  
+  if($atts)
+  $gallery = "<ul class='sponsorGallery' style='width:".$args["width"]."px;'>";
+  $gallery .= $items;
+  $gallery .= "</ul><div class='clear'/>";
+  
+  return $gallery;
+}
+add_shortcode('sponsorGallery', 'sponsorGallery_handler');
 
 endif;
 ?>

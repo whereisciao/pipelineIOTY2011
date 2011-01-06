@@ -260,12 +260,12 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
   float: left;
   min-width: 100px;
 }
-#menu-black-tie-navigation li, .blackTieGallery li{
+#menu-black-tie-navigation li, .blackTieGallery li,  .sponsorGallery li{
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
 }
-.blackTieGallery {
+.blackTieGallery, .sponsorGallery {
   list-style: none;
   padding: 0;
   margin: 0;
