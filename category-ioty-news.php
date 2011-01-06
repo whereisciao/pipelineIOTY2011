@@ -7,16 +7,18 @@
       		<div class="post span-24 first last" id="post-<?php the_ID(); ?>">
         		
 
-      			<div class="entry">
+      			<div class="entry span-14 first">
 
       				<?php the_content(); ?>
 
       				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
+        			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
+
       			</div>
-
-      			<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
-
+      			<div class="featured-image span-8 last">
+      			  <?php the_post_thumbnail(array(300, 200)); ?>              
+    			  </div>
       		</div>
 
       		<?php endwhile; endif; ?>
