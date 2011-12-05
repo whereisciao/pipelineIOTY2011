@@ -264,6 +264,7 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
   float: left;
   margin-right: 20px;
   margin-bottom: 20px;
+  min-height: 150px;
 }
 .blackTieGallery, .sponsorGallery {
   list-style: none;
@@ -274,6 +275,10 @@ ul.slider { list-style: none; padding: 0; margin: 0;}
   margin-bottom: 3em;
 }
 
+.page-id-501 img { float: left; margin-right: 3px; margin-bottom: 3px; }
+.page-id-501 h1 { font-size: 24px; }
+.page-id-501 h2 { font-size: 18px; }
+.page-id-501 .judge-bio { margin-bottom: 3em; }
 ol.commentlist { list-style: none; }
 ol.commentlist li { }
 ol.commentlist li.alt { }
